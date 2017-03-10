@@ -48,7 +48,9 @@ h1.page-header {
 div.day {
   padding: 10px;
 }
-
+p:empty {
+  display: none;
+}
 /* Header */
 
 header#page-header .region-header .form-control {
@@ -320,10 +322,8 @@ div#recherchetabs ul.nav-tabs>li.active>a {
   border-color: #c77a00;
 }
 
-.btn.btn-default.btn-graduation-cap {
-  background-color: transparent;
-  border-color: transparent;
-  cursor: default; 
+.graduation-cap {
+  color: #333;
 }
 
 .card {
@@ -331,8 +331,11 @@ div#recherchetabs ul.nav-tabs>li.active>a {
   border: solid 1px #b4b4b4;
   border-radius: 2px;
   padding: 15px;
-  margin: 20px;
+  /*margin: 20px;*/
   box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+.card .row {
+  margin-top: 20px;
 }
 
 .card .btn {
@@ -351,9 +354,9 @@ div#recherchetabs ul.nav-tabs>li.active>a {
   margin-right: 20px;
 }
 
-.user-picture {
-  margin: 0 1.5em 0 0;  
-}
+/*.user-picture {
+  margin: 0 1.5em 0 0;
+}*/
 
 .user-picture img {
     border-radius: 50%;
@@ -482,12 +485,12 @@ body.page-venir #block-block-6 {
 }
 
 .region-copyright #block-block-13 {
-	float:left	
+	float:left
 }
 
 #img-footer-logo-univ {
 	width: 75px;
-	margin-right: 1em;	
+	margin-right: 1em;
 }
 
 /* Sidebar */
@@ -653,7 +656,7 @@ a.arrowed {
   display: block;
   border-bottom: solid 1px #b4b4b4;
   white-space: nowrap;
-  overflow: hidden; 
+  overflow: hidden;
   text-overflow: ellipsis;
   background-color: #007187;
   color: white;
@@ -687,7 +690,7 @@ a.arrowed {
   padding: 10px 15px;
   color: #6174e4;
   white-space: nowrap;
-  overflow: hidden; 
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
@@ -801,7 +804,7 @@ span.ressource-type-18:before,
 .is-useful-link.selected a {
   border-color: #c77a00;
   color: white;
-  background-color: #fa9900; 
+  background-color: #fa9900;
 }
 
 /* Login page */
@@ -825,7 +828,7 @@ span.ressource-type-18:before,
   header#titlebar .logo img {
     width: 20px;
   }
-  
+
   header#titlebar .name {
     font-size: 22px;
     line-height: 50px;
@@ -917,7 +920,7 @@ span.ressource-type-18:before,
   #todaypole .thisweeklib td p {
     width: 100%;
   }
-  
+
   .user-picture img {
     margin: 0.2em 0 0.5em 0;
     width: 50px;
