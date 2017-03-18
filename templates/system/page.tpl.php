@@ -140,9 +140,9 @@
     <?php endif; ?>
 
     <section<?php print $content_column_class; ?>>
-      <?php if (!empty($page['highlighted'])): ?>
+      <?php //if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-      <?php endif; ?>
+      <?php //endif; ?>
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
@@ -170,6 +170,14 @@
     <?php endif; ?>
 
   </div>
+
+  <?php if (!empty($page['postscript'])): ?>
+    <div class="row">
+      <div class="col col-lg-12">
+        <?php print render($page['postscript']); ?>
+      </div>
+    </div>
+  <?php endif; ?>
 
   <div class="row">
     <?php if (!empty($page['content_left'])): ?>
